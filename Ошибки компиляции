@@ -1,0 +1,29 @@
+Вася написал такой код, но что-то опять пошло не так.
+
+namespace Slide01
+{
+    class Program
+    {
+        static void Main()
+        {
+            System.Console.WriteLine(Min(4, 2, 3));
+        }
+        
+        static int Min(int a, int b, int c)
+        {
+            return Math.Min(a, Math.Min(b, c));
+        }
+    }
+}
+1. Как можно дополнить код, чтобы он начал компилироваться? Выберите все возможные варианты. 1 из 1 балла
+Дописать "using System;" в начало
+Написать "System.Math.Min" вместо "Math.Min"
+
+
+Компилируя другую программу Вася получил следующее сообщение при компиляции:
+
+Controller.cs(9,4,9,15): error CS1501: No overload for method 'Min' takes 1 arguments
+2. Что это может значить? Отметьте все корректные варианты. 1 из 1 балла
+Ошибка в файле Controller.cs
+Есть ошибка в девятой строке
+Вася попытался вызвать функцию Min с одним аргументом
